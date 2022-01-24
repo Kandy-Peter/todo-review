@@ -24,7 +24,6 @@ export const removeToDo = (element) => {
   localStorage.setItem('todoStore', JSON.stringify(todoArray));
 };
 
-
 const completeToDo = (todoArray, element) => {
   const task = todoArray.find((t) => t.index === Number(element.id));
   task.completed = element.checked;
@@ -77,7 +76,6 @@ const clearAll = (todoArray) => {
 
   return todoArray;
 };
-
 
 clear.addEventListener('click', () => {
   const arr = clearAll(todoArray);
